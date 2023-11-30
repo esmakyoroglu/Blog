@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+
+body{
+    background-color: #FFE3BB;
+    color: black;
+    font-size: 1rem;
+    font-family: 'Playpen Sans', cursive;
+    
+}
+main{
+    height: 100vh;
+}
+.logo{
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 2rem;
+    text-decoration: none;
+    color:#83A2FF;
+    font-weight: bold;
+}
+.header{
+    background-color: #FFD28F;
+    border-radius: 10px;
+}
+.header ul li a{
+    color: #83A2FF;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+select,
+textarea {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.7rem 0.75rem;
+  margin-bottom: 1rem;
+}
+.btn{
+    background-color: #B4BDFF;
+    color: #FFD28F;
+    border: none;
+    /*top bottom, right left*/
+    padding:16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.header .navbar-logo{
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 25px;
+    color:#83A2FF;
+}
+.header .nav li a:hover{
+    color:black;
+}
+.header .nav li a.active{
+    color:black;
+}
+.articles{
+    margin: 40px auto;
+    padding: 0 20px;
+}
+.article_ul li{
+    list-style: none;
+    margin: 40px 0 40px 0;
+    
+}
+.article_ul li a{
+    margin: 5px 20px;   
+}
+ 
+.post_date{
+    font-size: 1rem;
+    color: #B4BDFF;
+    display: inline-block;
+}
+.old_post{
+    color: #B4BDFF;
+}
+.old_post:hover{
+    color:#83A2FF;
+}
+/*yazılar arasına çizgi çekme*/
+.article_ul li:not(:last-child){
+    border-bottom: 1px solid #83A2FF;
+}
+.article_ul li:hover{
+    filter:none;
+}
+.article_ul:hover li{
+    filter: blur(2px);
+}
+.article_ul:hover li:hover{
+    filter: none;
+}
+.admin_post li a{
+    color:black;
+}
+
+
+  

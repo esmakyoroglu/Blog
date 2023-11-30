@@ -1,0 +1,15 @@
+<a href="/dashboard" class="text-black">&larr; Geri</a>
+<div class="admin_title mt-4 d-flex justify-content-between">
+    <h2>Düzenle</h2>
+    <form action="/post_delete/<%= data._id %>?_method=DELETE" method="POST">
+        <input type="submit" value="Sil" class="btn text-dark">
+    </form>
+</div>
+<form action="/edit_post/<%= data._id %>?_method=PUT" method="POST">
+    <label for="title"><b>Başlık</b></label>
+    <input type="text" placeholder="Yazı Başlığı" name="title" value="<%= data.title %>">
+
+    <label for="body"><b>Metin</b></label>
+    <textarea name="body" cols="50" rows="10"><%= data.body %></textarea>
+    <input type="submit" value="Güncelle" class="btn">
+</form>

@@ -1,0 +1,24 @@
+<div class="author">
+    <section class="articles">
+
+        <% if (data.length===0) { %>
+         <h1 class="text-center m-5">Aradığınız Sonuç Bulunmamaktadır :(</h1>
+        <%} else { %>
+            <ul class="article_ul">
+                <div class="author_heading">
+                    <h1>Arama Sonuçları</h1>
+                </div>
+               
+                <% data.forEach(post => { %>
+        
+                <li>
+                    <a class="d-flex flex-row justify-content-between text-decoration-none text-black" href="/post/<%= post._id %>">
+                        <span class="post_title"><%= post.title %></span>
+                        <span class="post_date"><%= post.createdAt.toLocaleDateString() %></span>
+                    </a>
+                </li>
+                <% }) %>
+            </ul>
+        <% } %>
+    </section>
+</div>

@@ -1,0 +1,27 @@
+<!--sayfanın main bölümü-->
+
+<div class="author text-center p-3">
+    <h1 class="author_heading"> <%=locals.title%> </h1>
+    <p class="author_paragh"> <%=locals.description%> </p>
+    <a href="/admin" class="text-black">Giriş Yap</a>
+</div>
+<section class="articles">
+    <h2 class="article_heading">En Son Eklenenler</h2>
+    <ul class="article_ul">
+        <%# main.js den data olarak verileri çekmiştik data.foreach verilermiz postdan geliyordu o yüzden foreach adını post verdik istediğn adı verebilirsin oraya farketmez%> 
+        <% data.forEach(post => { %>
+
+        <li>
+            <a class="d-flex flex-row justify-content-between text-decoration-none text-black" href="/post/<%= post._id %>">
+                <span class="post_title"><%= post.title %></span>
+                <span class="post_date"><%= post.createdAt.toLocaleDateString() %></span>
+            </a>
+        </li>
+        <% }) %>
+    </ul>
+    <% if (nextPage!==null) { %>
+        <a href="/?page=<%= nextPage %>" class="old_post text-decoration-none">Eski Yazıları Görüntüle</a>
+    <% } %>
+
+</section>
+
